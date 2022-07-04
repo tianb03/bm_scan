@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<launch>
+    <node name="bm661" pkg="bm_scan" type="bm661" output="screen">
+        <param name="frame_id" type="string" value="laser"/><!--frame_id设置-->
+        <param name="scan_topic" type="string" value="scan" /><!--topic设置-->
+        <param name="inverted" type="bool" value="false"/><!--配置是否倒装,true倒装-->
+        <param name="hostip" type="string" value="0.0.0.0"/><!--配置本机监听地址，0.0.0.0表示监听全部-->
+        <param name="port" type="string" value="2368"/><!--配置本机监听端口-->
+        <param name="angle_offset" type="int" value="0"/><!--配置点云旋转角度，可以是负数-->
+    </node>
+</launch>
