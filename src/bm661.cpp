@@ -175,7 +175,7 @@ int main(int argc, char **argv)
 			scan.scan_time = duration;
 			scan.time_increment = duration/(float)num_readings;
 			scan.range_min = 0.0;
-			scan.range_max = 100.0;
+			scan.range_max = 30.0;
 			scan.ranges.resize(num_readings);
 			scan.intensities.resize(num_readings);
 
@@ -194,7 +194,7 @@ int main(int argc, char **argv)
 			}
 
 			scan_pub.publish(scan);
-			ROS_INFO("New scan published, total data points: %d", num_readings);
+			ROS_DEBUG("New scan published, total data points: %d", num_readings);
 			scan_vec.clear();
 			scan_vec_ready = 0;
 		}
